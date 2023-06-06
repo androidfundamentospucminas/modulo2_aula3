@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="18dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/campoDeTexto"
+            android:hint="Procurar por ..."
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/botaoProcurar"
+            android:text="PROCURAR"
+            android:visibility="visible"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/barraProgresso"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/containerDaPesquisa"
+        android:visibility="visible"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imagemDoResultado"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/tituloDoResultado"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="Título do Resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/descricaoDoResultado"
+                android:layout_marginTop="8dp"
+                android:text="Descrição da pesquisa, conteúdo da pesquisa, resultado da pesquisa."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
